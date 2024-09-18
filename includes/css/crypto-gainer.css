@@ -1,0 +1,187 @@
+/* Container for the entire crypto section */
+.cpcpref-crypto-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section styling */
+.cpcpref-section {
+    flex: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
+    min-width: 300px;
+}
+
+/* Section header styling */
+.cpcpref-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title styling for sections */
+.cpcpref-section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+/* Link styling */
+.cpcpref-details-link {
+    font-size: 0.9em;
+    color: #3498db;
+    text-decoration: none;
+    border: 1px solid #3498db;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.cpcpref-details-link:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Crypto list styling */
+.cpcpref-crypto-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual crypto item styling */
+.cpcpref-crypto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.cpcpref-crypto-item:last-child {
+    border-bottom: none;
+}
+
+/* Logo styling */
+.cpcpref-crypto-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Crypto name styling */
+.cpcpref-crypto-name {
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+/* Crypto price styling */
+.cpcpref-crypto-price {
+    margin-right: 15px;
+    font-size: 1em;
+}
+
+/* Percentage change styling */
+.cpcpref-crypto-percent {
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.cpcpref-gain {
+    margin-right: 15px;
+    font-size: 1em;
+    color: #1bd207;
+}
+
+.cpcpref-loss {
+    margin-right: 15px;
+    font-size: 1em;
+    color: #f60000;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .cpcpref-crypto-container {
+        flex-direction: column;
+    }
+
+    .cpcpref-section {
+        width: 100%;
+    }
+}
+
+
+
+
+/* ADMIN PANEL STYLE */
+.cpt-crypto-settings-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: #f0f4f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cpt-crypto-settings-box, .cpt-crypto-preview-box {
+    width: 90%;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cpt-crypto-settings-box:hover, .cpt-crypto-preview-box:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.cpt-crypto-settings-box h2, .cpt-crypto-preview-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cpt-crypto-settings-box form {
+    margin-bottom: 0;
+}
+
+.cpt-crypto-settings-box .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .cpt-crypto-settings-box, .cpt-crypto-preview-box {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+/* Settings elements -- show in horizontal way */
+.cpcpref-settings-container {
+    display: flex;
+    gap: 100px; 
+    align-items: flex-start; 
+}
+
+.cpcpref-settings-container .form-table {
+    width: auto; 
+}
+
