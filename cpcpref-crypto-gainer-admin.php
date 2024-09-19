@@ -36,23 +36,19 @@ function cpcpref_crypto_gainer_settings_page() {
                     </div>
                 </form>
 
-                
                 <!-- Editor for shortcode -->
                 <br>
-                <div class="cpcpref-settings-container" style="border: 2px solid #000; padding: 10px;">
+                <div class="cpcpref-settings-container" style="border: 1px solid grey; padding: 10px;">
                     <span>
                         <h3> Shortcode </h3>
-                        <textarea readonly rows="5" cols="100%" style="resize:none; background-color: white;"><?php  echo cpcpref_crypto_preview() ?></textarea>
+                        <textarea readonly rows="5" cols="100%" style="resize:none; background-color: white;"><?php  echo esc_textarea(cpcpref_crypto_preview()); ?></textarea>
                     </span>
                     <span>
                         <h3> Usage </h3> 
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
-                        1 - this is how to use.<br>
+                        1 - Configure your plugin settings.<br>
+                        2 - Click on generate Shortcode & previw .<br>
+                        3 - Copy the shortcode and paste it into any page or post.<br>
+                        4 - Enjoy!<br><br><br>
                     </span>
                 </div>
 
@@ -79,6 +75,7 @@ function cpcpref_crypto_preview() {
     
     return '[cpcpref_crypto show_gainers="' . esc_attr($show_gainers) . '" show_losers="' . esc_attr($show_losers) . '" show_credits="' . esc_attr($show_credits) . '" box_color="' . esc_attr($box_color) . '" text_color="' . esc_attr($text_color) . '" box_width="' . esc_attr($box_width) . '" item_padding="' . esc_attr($item_padding) . '" max_items="' . esc_attr($max_items) . '"]';
 }
+
 
 
 // Function to register settings
