@@ -5,12 +5,12 @@ if (!defined('ABSPATH')) {
 }
 
 // Enqueue styles for the admin panel
-add_action('admin_enqueue_scripts', 'enqueue_cpcpref_crypto_gainer_styles');
-function enqueue_cpcpref_crypto_gainer_styles($hook) {
-    if ($hook !== 'toplevel_page_cpcpref-crypto-gainer') {
+add_action('admin_enqueue_scripts', 'cpcpref_crypto_gainer_styles');
+function cpcpref_crypto_gainer_styles($hook) {
+    if ($hook !== 'toplevel_page_cpcpref-crypto') {
         return;
     }
-    wp_enqueue_style('cpcpref-crypto-gainer-admin-css', plugins_url('includes/css/crypto-gainer.css', __FILE__), array(), '1.0.0');
+    wp_enqueue_style('cpcpref-cryptor-admin-css', plugins_url('includes/css/cpcpref-crypto.css', __FILE__), array(), '1.0.0');
 }
 
 // Function to display the settings page
@@ -20,7 +20,7 @@ function cpcpref_crypto_gainer_settings_page() {
         <div class="cpt-crypto-settings-container">  
             <div class="cpt-crypto-settings-box">
 
-                <h2 ><?php esc_html_e('Main Settings', 'cpcpref-crypto-gainer'); ?></h2>
+                <h2 ><?php esc_html_e('Main Settings', 'crypto-top-gainers-losers'); ?></h2>
                 <form method="post" action="options.php">
                     <?php settings_fields('cpcpref_crypto_gainer_settings_group'); ?>
                     
@@ -32,7 +32,7 @@ function cpcpref_crypto_gainer_settings_page() {
                     </div>
                     
                     <div style="display: flex; justify-content: center;">
-                        <?php submit_button(__('Generate Shortcode & Preview', 'cpcpref-crypto-gainer')); ?>
+                        <?php submit_button(__('Generate Shortcode & Preview', 'crypto-top-gainers-losers')); ?>
                     </div>
                 </form>
 
@@ -41,12 +41,12 @@ function cpcpref_crypto_gainer_settings_page() {
                 <div class="cpcpref-settings-container" style="border: 1px solid grey; padding: 10px;">
                     <span>
                         <h3> Shortcode </h3>
-                        <textarea readonly rows="5" cols="100%" style="resize:none; background-color: white;"><?php  echo esc_textarea(cpcpref_crypto_preview()); ?></textarea>
+                        <textarea readonly rows="3" cols="100%" style="resize:none; background-color: white;"><?php  echo esc_textarea(cpcpref_crypto_preview()); ?></textarea>
                     </span>
                     <span>
                         <h3> Usage </h3> 
-                        1 - Configure your plugin settings.<br>
-                        2 - Click on generate Shortcode & previw .<br>
+                        1 - Adjust the appearance of the shortcode.<br>
+                        2 - Click on generate Shortcode & preveiw.<br>
                         3 - Copy the shortcode and paste it into any page or post.<br>
                         4 - Enjoy!<br><br><br>
                     </span>
@@ -54,13 +54,14 @@ function cpcpref_crypto_gainer_settings_page() {
 
                 <!-- Shortcode preview -->
                 <br>
-                <h2 ><?php esc_html_e('Preview', 'cpcpref-crypto-gainer'); ?></h2><br>
+                <h2 ><?php esc_html_e('Preview', 'crypto-top-gainers-losers'); ?></h2><br>
                 <?php echo do_shortcode(cpcpref_crypto_preview()); ?>
             </div>
         </div>
     </div>
     <?php
 }
+
 
 // Function to generate shortcode preview
 function cpcpref_crypto_preview() {
@@ -99,7 +100,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_gainers',
-        __('Show Top Gainers', 'cpcpref-crypto-gainer'),
+        __('Show Top Gainers', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_gainers_cb',
         'cpcpref_setting_group_1',
         'cpcpref_crypto_gainer_main_section'
@@ -107,7 +108,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_losers',
-        __('Show Top Losers', 'cpcpref-crypto-gainer'),
+        __('Show Top Losers', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_losers_cb',
         'cpcpref_setting_group_1',
         'cpcpref_crypto_gainer_main_section'
@@ -115,7 +116,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_credits',
-        __('Show Credits', 'cpcpref-crypto-gainer'),
+        __('Show Credits', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_credits_cb',
         'cpcpref_setting_group_1',
         'cpcpref_crypto_gainer_main_section'
@@ -123,7 +124,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_text_color',
-        __('Text Color', 'cpcpref-crypto-gainer'),
+        __('Text Color', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_text_color_field_cb',
         'cpcpref_setting_group_1',
         'cpcpref_crypto_gainer_main_section'
@@ -131,7 +132,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_box_color',
-        __('Box Color', 'cpcpref-crypto-gainer'),
+        __('Box Color', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_box_color_field_cb',
         'cpcpref_setting_group_1',
         'cpcpref_crypto_gainer_main_section'
@@ -148,7 +149,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_max_items',
-        __('Coins to show', 'cpcpref-crypto-gainer'),
+        __('Coins to show', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_max_items_cb',
         'cpcpref_setting_group_2',
         'cpcpref_crypto_gainer_main_section'
@@ -156,7 +157,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_box_width',
-        __('Max Width (px)', 'cpcpref-crypto-gainer'),
+        __('Max Width (px)', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_box_width_cb',
         'cpcpref_setting_group_2',
         'cpcpref_crypto_gainer_main_section'
@@ -164,7 +165,7 @@ function cpcpref_crypto_gainer_register_settings() {
 
     add_settings_field(
         'cpcpref_crypto_gainer_item_padding',
-        __('Items padding (px)', 'cpcpref-crypto-gainer'),
+        __('Items padding (px)', 'crypto-top-gainers-losers'),
         'cpcpref_crypto_gainer_item_padding_cb',
         'cpcpref_setting_group_2',
         'cpcpref_crypto_gainer_main_section'
@@ -181,21 +182,21 @@ function cpcpref_crypto_gainer_main_section_cb() {
 function cpcpref_crypto_gainer_gainers_cb() {
     $show_marketcap = get_option('cpcpref_crypto_gainer_gainers', true); // Default to true if not set
     echo '<input type="checkbox" id="cpcpref_crypto_gainer_gainers" name="cpcpref_crypto_gainer_gainers" value="1" ' . checked(1, $show_marketcap, false) . '>';
-    echo '<label for="cpcpref_crypto_gainer_gainers">' . esc_html__(' Show Top Gainers', 'cpcpref-crypto-gainer') . '</label>';
+    echo '<label for="cpcpref_crypto_gainer_gainers">' . esc_html__(' Show Top Gainers', 'crypto-top-gainers-losers') . '</label>';
 }
 
 // Callback function for Show Losers checkbox
 function cpcpref_crypto_gainer_losers_cb() {
     $show_marketcap = get_option('cpcpref_crypto_gainer_losers', true); // Default to true if not set
     echo '<input type="checkbox" id="cpcpref_crypto_gainer_losers" name="cpcpref_crypto_gainer_losers" value="1" ' . checked(1, $show_marketcap, false) . '>';
-    echo '<label for="cpcpref_crypto_gainer_losers">' . esc_html__(' Show Top Losers', 'cpcpref-crypto-gainer') . '</label>';
+    echo '<label for="cpcpref_crypto_gainer_losers">' . esc_html__(' Show Top Losers', 'crypto-top-gainers-losers') . '</label>';
 }
 
 // Callback function for Show Credits checkbox
 function cpcpref_crypto_gainer_credits_cb() {
     $show_credits = get_option('cpcpref_crypto_gainer_credits', false); // Default to false if not set
     echo '<input type="checkbox" id="cpcpref_crypto_gainer_credits" name="cpcpref_crypto_gainer_credits" value="1" ' . checked(1, $show_credits, false) . '>';
-    echo '<label for="cpcpref_crypto_gainer_credits">' . esc_html__(' Show Credits', 'cpcpref-crypto-gainer') . '</label>';
+    echo '<label for="cpcpref_crypto_gainer_credits">' . esc_html__(' Show Credits', 'crypto-top-gainers-losers') . '</label>';
 }
 
 // Callback function for max coins input field
@@ -230,11 +231,10 @@ function cpcpref_crypto_gainer_item_padding_cb() {
 
 
 
-
 // Enqueue Select2 and color picker script and style
 function cpcpref_crypto_gainer_enqueue_scripts() {
     wp_enqueue_style('wp-color-picker');
-    wp_enqueue_script('cpcpref-crypto-gainer-color-picker', plugins_url('includes/js/cpcpref-crypto-gainer-color-picker.js', __FILE__), array('wp-color-picker'), '1.0.0', true);
+    wp_enqueue_script('cpcpref-crypto-color-picker', plugins_url('includes/js/cpcpref-crypto-color-picker.js', __FILE__), array('wp-color-picker'), '1.0.0', true);
 
     // Enqueue Select2
     wp_enqueue_style('select2', plugin_dir_url(__FILE__) . 'includes/css/select2.css', array(), '1.0.0');

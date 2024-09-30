@@ -6,12 +6,12 @@
 
 /*
 Plugin Name: Crypto Top Gainers & Losers
-Description: Customizable Cryptocurrency Price Table with real-time price update, marketcap and flexible settings. 
+Description: Display a customizable table of top cryptocurrency gainers and losers with real-time prices and flexible configuration options.
 Version: 1.0.0
 Author: icogems
 Author URI: https://icogems.com
 License: GPLv2 or later
-Text Domain: cpcpref-crypto-gainer
+Text Domain: crypto-top-gainers-losers
 */
 
 // Prevent direct access to the file
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Include the settings page file
-require_once(plugin_dir_path(__FILE__) . 'cpcpref-crypto-gainer-admin.php');
+require_once(plugin_dir_path(__FILE__) . 'crypto-top-gainers-losers-admin.php');
 
 
 // Enqueue styles for the table
@@ -28,7 +28,7 @@ function cpcpref_crypto_gainer_enqueue_styles() {
     if (!is_singular()) { 
         return; 
     }
-    wp_enqueue_style('cpcpref-crypto-gainer-style', plugin_dir_url(__FILE__) . 'includes/css/crypto-gainer.css', array(), '1.0.0');
+    wp_enqueue_style('cpcpref-crypto-style', plugin_dir_url(__FILE__) . 'includes/css/cpcpref-crypto.css', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'cpcpref_crypto_gainer_enqueue_styles');
 
@@ -37,8 +37,8 @@ add_action('wp_enqueue_scripts', 'cpcpref_crypto_gainer_enqueue_styles');
 // Shortcode function to display the TOP GAINER
 function cpcpref_crypto_shortcode($attr) {
 
-    wp_enqueue_script('cpcpref-crypto-gainer-script', plugin_dir_url(__FILE__) . 'includes/js/cpcpref-crypto-gainer.js', array('jquery'), '1.0.0', true);
-    wp_localize_script('cpcpref-crypto-gainer-script', 'CpcprefCryptoGainer', array(
+    wp_enqueue_script('cpcpref-crypto-script', plugin_dir_url(__FILE__) . 'includes/js/cpcpref-crypto.js', array('jquery'), '1.0.0', true);
+    wp_localize_script('cpcpref-crypto-script', 'CpcprefCryptoGainer', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('crypto-price-table-pro-nonce'),
         'img_url' => plugin_dir_url(__FILE__) . 'includes/img/',
@@ -93,10 +93,10 @@ add_shortcode('cpcpref_crypto', 'cpcpref_crypto_shortcode');
 // Function to register admin menu
 function cpcpref_crypto_gainer_admin_menu() {
     add_menu_page(
-        'Crypto Gainer/Loser Settings',
-        'Crypto Gainer/Loser',
+        'Crypto Gainer Loser Settings',
+        'Gainers Losers',
         'manage_options',
-        'cpcpref-crypto-gainer',
+        'cpcpref-crypto',
         'cpcpref_crypto_gainer_settings_page',
         'dashicons-chart-line',
         100

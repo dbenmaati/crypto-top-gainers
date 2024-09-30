@@ -1,7 +1,7 @@
-=== Crypto Price Table Pro ===
+=== Crypto Top Gainers & Losers ===
 Contributors: dhiabm1998
 Donate link: https://icogems.com
-Tags: crypto, cryptocurrency, ticker, coinmarketcap, bitcoin
+Tags: crypto, cryptocurrency, top gainers, top losers, crypto gainers
 Requires at least: 4.0
 Tested up to: 6.6
 Stable tag: 1.0.0
@@ -9,39 +9,32 @@ Requires PHP: 5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Customizable Cryptocurrency Price Table with real-time price update, marketcap and flexible settings. 
+Display a customizable table of top cryptocurrency gainers and losers with real-time prices and flexible configuration options.
 
 == Description ==
 
-**Crypto Price Table Pro** :
-A robust Customizable cryptocurrency live price plugin offering a seamless crypto price & marketcap for 2000 popular coins. 
+= 🔥 Crypto Top Gainers & Losers 🔥 =
+A powerful and customizable cryptocurrency widget designed to display real-time prices of the top gainers and losers in the market. Track the biggest movers with flexible configuration options to suit your site’s needs.
 <br><br>
-Experience real-time cryptocurrency price updates with highly customizable settings. Transform your site with an elegant and efficient live crypto prices.
+This plugin brings real-time cryptocurrency data for the most volatile assets, helping your audience stay updated with the latest market trends. Display top gainers and losers with live price updates, all within an elegant and highly customizable layout.
 <br><br>
-Built with pure JavaScript & websocket, this widget ensures seamless performance while offloading data processing to a secure third-party server. 
+Built with modern JavaScript technology, the plugin ensures a smooth user experience, with data processing handled by a secure third-party server.
 
-—
 
-![Table Preview 1](https://icogems.com/img/wp-data/sc1.jpg)
 
-<br><br>
-
-![Table Preview 2](https://icogems.com/img/wp-data/sc3.jpg)
-
-= Features =
+= 🔥 Features 🔥 =
 1. No Cryptojacking!
-2. Support 2000 popular cryptocurrencies;
-3. Real-time streaming price update with websocket;
-4. Flexible settings and customizable design;
-5. Processed on a 3rd-party server;
+2. Real-Time Data
+3. Customizable settings and design
+4. Efficient & Lightweight
+5. SEO-friendly
 7. SSL support;
 8. IE9+ support;
-9. SEO-friendly.
-10. Support & updates from [icogems](https://icogems.com)
+9. Support & updates from [icogems](https://icogems.com)
 
 <br><br>
 
-Our plugin leverages third-party WebSocket and REST APIs to deliver real-time cryptocurrency data, significantly reducing the load on your server. 
+Our plugin leverages third-party REST APIs to deliver real-time cryptocurrency data, significantly reducing the load on your server. 
 We source this data from the reliable [Coincap API](https://coincap.io). For more information about the API and its Terms of Service, you can visit [coincap api documentation](https://docs.coincap.io/).
 
 <br><br>
@@ -49,60 +42,52 @@ This plugin is powred by one of the most powerful ICO & Crypto listing platforms
 
 == Installation ==
 
-= Video =
-[youtube https://www.youtube.com/watch?v=j0QNw4hz_TE]
+= Installation WordPress dashboard =
+1. Visit "Plugins > Add New".
+2. Search for "Crypto Top Gainers & Losers".
+3. Activate "Crypto Top Gainers & Losers" from your Plugins page.
+4. Go to the plugin settings panel and follow the steps to generate shortcode.
 
-= From your WordPress dashboard =
-1. Visit "Plugins > Add New"
-2. Search for "Cryptocurrency Price Widget"
-3. Activate "Cryptocurrency Price Widget" from your Plugins page.
-4. Add widgets on yourdomain.com/wp-admin/widgets.php page.
-
-= From WordPress.org =
-1. Download "Cryptocurrency Price Widget".
-2. Upload the "Cryptocurrency Price Widget" directory to your "/wp-content/plugins/" directory, using your favorite method (ftp, sftp, scp, etc…).
-3. Activate "Cryptocurrency Price Widget" from your Plugins page.
-4. Add widgets on yourdomain.com/wp-admin/widgets.php page.
 
 == Frequently Asked Questions ==
 
-= 1. What is the Crypto Price Table Pro plugin? =
+= 1. What is the Crypto Top Gainers & Losers plugin? =
 
-The Crypto Price Table Pro plugin is a powerful and customizable WordPress plugin that allows you to display live real-time cryptocurrency prices, market capitalization, and other data on your website. It uses WebSockets for real-time updates and is highly customizable.
+The Crypto Top Gainers & Losers plugin is a powerful and customizable WordPress tool that allows you to display real-time prices, market trends, and key data for the top-performing and worst-performing cryptocurrencies on your website.
 
-= 2. How do I install the Crypto Price Table Pro plugin? =
-
-You can install the plugin via your WordPress dashboard or manually from WordPress.org.
-
-*From your WordPress dashboard:*
+= 2. How do I install the Crypto Top Gainers & Losers plugin? =
 
 1. Visit "Plugins > Add New".
 
-2. Search for "Cryptocurrency Price Table".
+2. Search for "Crypto Top Gainers & Losers".
 
-3. Activate "Cryptocurrency Price Table" from your Plugins page.
+3. Activate "Crypto Top Gainers & Losers" from your Plugins page.
 
-4. In your admin panel go to CPT settings page and customize your crypto table
+4. Follow the steps in the plugin settings panel.
 
-5. Copy the generated shortcode and paste it in your desired page or section
 
-= 3. What are the main features of the Crypto Price Table Pro plugin? =
+= 3. What are the main features of the Crypto Top Gainers & Losers plugin? =
 
-* Supports 2000 cryptocurrencies
-* Real-time streaming price updates
-* Flexible settings and customizable design
-* Websocket real time price update
-* Lightweight
-* SSL support
+* Displays top gainers and losers in real-time
+* Customizable table layout and settings
+* real-time price updates
+* Lightweight and fast
 * SEO-friendly
+* SSL support for secure data
 
-= 4. Is the Crypto Price Table Pro plugin SEO-friendly? =
+= 4. Is the Crypto Top Gainers & Losers plugin SEO-friendly? =
 
-Yes, the plugin is designed to be SEO-friendly, ensuring that your site's SEO performance is not compromised.
+Yes, the plugin is optimized to ensure it does not negatively impact your site's SEO performance, helping you maintain visibility on search engines.
 
-= 5. How do I add the Crypto Price Table widget to my website? =
+= 5. How do I add the Crypto Top Gainers & Losers widget to my website? =
 
-Once the plugin is activated, you can start customizing your crypto price table & generate shortcode, once you generated your shortcode you can paste it in any page or section in your website.
+After activating the plugin, you can customize the table from the settings page. Once you’ve configured it, copy the generated shortcode and paste it into any page or section on your website.
+
+= 5. Why using coincap api? =
+
+Our plugin leverages third-party REST APIs to deliver real-time cryptocurrency data, significantly reducing the load on your server. 
+We source this data from api.coincap.io visit [coincap api documentation](https://docs.coincap.io/) for more details or [coincap terms of use](https://docs.coincap.io/#intro)
+
 
 
 == Screenshots ==
