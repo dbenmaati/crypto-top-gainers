@@ -64,7 +64,7 @@ function cpcpref_crypto_shortcode($attr) {
         $output .= '<div class="cpcpref-section" style="max-width: ' . $box_width . 'px; background: ' . $box_color . ';">';
         $output .= '<div class="cpcpref-section-header">';
         $output .= '<span class="cpcpref-section-title" style="color: ' . $text_color . ';">Top Gainers</span>';
-        $output .= '<a href="https://icogems.com" target="_blank" rel="nofollow" class="cpcpref-details-link">More Crypto Details</a>';
+        $output .= '<a href="https://icogems.com" target="_blank" rel="nofollow" style="color: ' . $text_color . ';" class="cpcpref-details-link">More Crypto Details &#9741;</a>';
         $output .= '</div>';
         $output .= '<ul class="cpcpref-crypto-list" id="cpcpref-top-gainers">';
         $output .= '</ul>';
@@ -76,7 +76,7 @@ function cpcpref_crypto_shortcode($attr) {
         $output .= '<div class="cpcpref-section" style="max-width: ' . $box_width . 'px; background: ' . $box_color . ';">';
         $output .= '<div class="cpcpref-section-header">';
         $output .= '<span class="cpcpref-section-title" style="color: ' . $text_color . ';">Top Losers</span>';
-        $output .= '<a href="https://icogems.com" target="_blank" rel="nofollow" class="cpcpref-details-link">More Crypto Details</a>';
+        $output .= '<a href="https://icogems.com" target="_blank" rel="nofollow" style="color: ' . $text_color . ';" class="cpcpref-details-link">More Crypto Details &#9741;</a>';
         $output .= '</div>';
         $output .= '<ul class="cpcpref-crypto-list" id="cpcpref-top-losers">';
         $output .= '</ul>';
