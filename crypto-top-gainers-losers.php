@@ -7,7 +7,7 @@
 /*
 Plugin Name: Crypto Top Gainers & Losers
 Description: Display a customizable table of top cryptocurrency gainers and losers with real-time prices and flexible configuration options.
-Version: 1.0.0
+Version: 1.0.1
 Author: icogems
 Author URI: https://icogems.com
 License: GPLv2 or later
