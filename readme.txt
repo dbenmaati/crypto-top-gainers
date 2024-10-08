@@ -4,7 +4,7 @@ Donate link: https://icogems.com
 Tags: crypto, cryptocurrency, top gainers, top losers, crypto gainers
 Requires at least: 4.0
 Tested up to: 6.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -91,12 +91,13 @@ We source this data from api.coincap.io visit [coincap api documentation](https:
 
 
 == Screenshots ==
-![screenshot1](https://icogems.com/img/wp-data/sc1.jpg)
-![screenshot2](https://icogems.com/img/wp-data/sc2.jpg)
-![screenshot3](https://icogems.com/img/wp-data/sc3.jpg)
-![screenshot4](https://icogems.com/img/wp-data/sc4.jpg)
-![screenshot5](https://icogems.com/img/wp-data/sc5-settings.jpg)
+Screenshot 1
+Screenshot 2
+Screenshot 3
+Settings Page
 
 == Changelog ==
 = 1.0.0 =
 * First stable release
+= 1.0.1 =
+* stable release with minor enhancements
